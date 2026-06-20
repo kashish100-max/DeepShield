@@ -1,0 +1,241 @@
+/* ==========================
+   RESULT PAGE
+========================== */
+
+.result-page {
+  background: #0F1916;
+  color: #F0FDF4;
+  min-height: 100vh;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.result-header {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.result-header h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.result-header p {
+  color: rgba(240, 253, 244, 0.75);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ==========================
+   PREVIEW
+========================== */
+
+.preview-section {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto 3rem auto;
+  text-align: center;
+}
+
+.preview-section h2 {
+  margin-bottom: 1.5rem;
+}
+
+.preview-image {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 24px;
+  border: 2px solid #1E2E2A;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+/* ==========================
+   RISK SECTION
+========================== */
+
+.risk-section {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.risk-card,
+.summary-card {
+  background: #1E2E2A;
+
+  border-radius: 24px;
+
+  padding: 2rem;
+
+  border: 1px solid rgba(82,209,163,0.15);
+}
+
+.risk-card {
+  text-align: center;
+}
+
+.risk-card h2 {
+  margin-bottom: 2rem;
+}
+
+.risk-circle {
+  width: 180px;
+  height: 180px;
+
+  border-radius: 50%;
+
+  margin: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 8px solid #52D1A3;
+}
+
+.risk-circle h1 {
+  font-size: 3rem;
+  color: #52D1A3;
+}
+
+.risk-card h3 {
+  margin-top: 1.5rem;
+  color: #EE6B6B;
+}
+
+.summary-card h2 {
+  margin-bottom: 1rem;
+}
+
+.summary-card p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.summary-card h4 {
+  margin-top: 1rem;
+  color: #52D1A3;
+}
+
+/* ==========================
+   INDICATORS
+========================== */
+
+.indicator-section {
+  width: 90%;
+  max-width: 1200px;
+
+  margin: 4rem auto;
+}
+
+.indicator-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.indicator-list {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+
+  gap: 1.5rem;
+}
+
+.indicator-card {
+  background: #1E2E2A;
+
+  padding: 1.5rem;
+
+  border-radius: 18px;
+
+  border: 1px solid rgba(82,209,163,0.15);
+
+  transition: 0.3s ease;
+}
+
+.indicator-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #52D1A3;
+}
+
+/* ==========================
+   REPORT
+========================== */
+
+.report-section {
+  width: 90%;
+  max-width: 900px;
+
+  margin: auto;
+
+  text-align: center;
+
+  background: #1E2E2A;
+
+  padding: 3rem;
+
+  border-radius: 24px;
+
+  border: 1px solid rgba(82,209,163,0.15);
+}
+
+.report-section h2 {
+  margin-bottom: 1rem;
+}
+
+.report-section p {
+  margin-bottom: 2rem;
+  color: rgba(240,253,244,0.75);
+}
+
+.download-btn {
+  background: #52D1A3;
+  color: #0F1916;
+
+  padding: 1rem 2rem;
+
+  border-radius: 12px;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.download-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(82,209,163,0.3);
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 768px) {
+
+  .risk-section {
+    grid-template-columns: 1fr;
+  }
+
+  .result-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .risk-circle {
+    width: 140px;
+    height: 140px;
+  }
+
+  .risk-circle h1 {
+    font-size: 2rem;
+  }
+
+}

@@ -1,0 +1,68 @@
+/* ==========================
+   RESET
+========================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==========================
+   GLOBAL
+========================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0F1916;
+  color: #F0FDF4;
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+
+  overflow-x: hidden;
+}
+
+/* ==========================
+   ROOT
+========================== */
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* ==========================
+   LINKS
+========================== */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+button {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* ==========================
+   IMAGES
+========================== */
+
+img {
+  max-width: 100%;
+  display: block;
+}

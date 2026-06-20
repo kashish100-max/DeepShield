@@ -1,0 +1,268 @@
+/* ===== HOME PAGE ===== */
+
+.home {
+  background-color: #0F1916;
+  color: #F0FDF4;
+  min-height: 100vh;
+}
+
+/* ==========================
+   FEATURES
+========================== */
+
+.features {
+  padding: 5rem 8%;
+}
+
+.features h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: #1E2E2A;
+  border: 1px solid rgba(82, 209, 163, 0.15);
+
+  border-radius: 20px;
+
+  padding: 2rem;
+
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+
+  border-color: #52D1A3;
+
+  box-shadow: 0 10px 25px rgba(82, 209, 163, 0.12);
+}
+
+.card h3 {
+  color: #52D1A3;
+
+  margin-bottom: 1rem;
+}
+
+.card p {
+  color: rgba(240, 253, 244, 0.8);
+
+  line-height: 1.7;
+}
+
+/* ==========================
+   WORKFLOW
+========================== */
+
+.workflow {
+  padding: 5rem 8%;
+}
+
+.workflow h2 {
+  text-align: center;
+
+  font-size: 2.5rem;
+
+  margin-bottom: 3rem;
+}
+
+.steps {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 2rem;
+
+  flex-wrap: wrap;
+}
+
+.step {
+  background: #1E2E2A;
+
+  border-radius: 20px;
+
+  padding: 2rem;
+
+  width: 180px;
+
+  text-align: center;
+
+  border: 1px solid rgba(82, 209, 163, 0.15);
+}
+
+.step h3 {
+  color: #52D1A3;
+
+  font-size: 2rem;
+
+  margin-bottom: 1rem;
+}
+
+/* ==========================
+   IMPACT
+========================== */
+
+.impact {
+  padding: 5rem 8%;
+}
+
+.impact h2 {
+  text-align: center;
+
+  font-size: 2.5rem;
+
+  margin-bottom: 3rem;
+}
+
+.impact-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 2rem;
+}
+
+.impact .card {
+  text-align: center;
+}
+
+/* ==========================
+   STATS
+========================== */
+
+.stats {
+  padding: 5rem 8%;
+}
+
+.stats h2 {
+  text-align: center;
+
+  font-size: 2.5rem;
+
+  margin-bottom: 3rem;
+}
+
+.stats-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  gap: 2rem;
+}
+
+.stat-card {
+  background: #1E2E2A;
+
+  padding: 2rem;
+
+  border-radius: 20px;
+
+  text-align: center;
+
+  border: 1px solid rgba(82, 209, 163, 0.15);
+}
+
+.stat-card h1 {
+  color: #52D1A3;
+
+  font-size: 3rem;
+
+  margin-bottom: 1rem;
+}
+
+.stat-card p {
+  color: rgba(240, 253, 244, 0.8);
+
+  line-height: 1.6;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+.footer {
+  padding: 2rem;
+
+  text-align: center;
+
+  border-top: 1px solid rgba(82, 209, 163, 0.15);
+
+  color: rgba(240, 253, 244, 0.7);
+}
+
+.upload-preview {
+  text-align: center;
+}
+
+.upload-icon {
+  font-size: 5rem;
+  color: #52D1A3;
+  margin-bottom: 1rem;
+}
+
+.upload-preview h3 {
+  color: #F0FDF4;
+  margin-bottom: 1rem;
+}
+
+.upload-preview p {
+  color: rgba(240, 253, 244, 0.75);
+  margin-bottom: 1.5rem;
+}
+
+.browse-btn {
+  background: #52D1A3;
+  color: #0F1916;
+
+  padding: 0.9rem 1.5rem;
+
+  border-radius: 12px;
+
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.browse-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(82, 209, 163, 0.25);
+}
+
+.upload-preview span {
+  display: block;
+
+  margin-top: 1rem;
+
+  color: rgba(240, 253, 244, 0.6);
+
+  font-size: 0.9rem;
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 768px) {
+
+  .features,
+  .workflow,
+  .impact,
+  .stats {
+    padding: 3rem 1.5rem;
+  }
+
+  .features h2,
+  .workflow h2,
+  .impact h2,
+  .stats h2 {
+    font-size: 2rem;
+  }
+
+}

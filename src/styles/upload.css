@@ -1,0 +1,188 @@
+/* ==========================
+   UPLOAD PAGE
+========================== */
+
+.upload-page {
+  min-height: 100vh;
+  background: #0F1916;
+  color: #F0FDF4;
+}
+
+/* ==========================
+   MAIN CONTAINER
+========================== */
+
+.upload-container {
+  width: 90%;
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  text-align: center;
+
+  padding: 4rem 0;
+}
+
+.upload-container h1 {
+  font-size: 3rem;
+
+  margin-bottom: 1rem;
+
+  color: #F0FDF4;
+}
+
+.upload-container p {
+  color: rgba(240, 253, 244, 0.8);
+
+  line-height: 1.7;
+
+  max-width: 700px;
+
+  margin: 0 auto;
+}
+
+/* ==========================
+   FILE INFO CARD
+========================== */
+
+.file-info {
+  margin-top: 2rem;
+
+  background: #1E2E2A;
+
+  padding: 1.5rem;
+
+  border-radius: 20px;
+
+  border: 1px solid rgba(82, 209, 163, 0.15);
+}
+
+.file-info h3 {
+  color: #52D1A3;
+
+  margin-bottom: 1rem;
+}
+
+.file-info p {
+  margin: 0.5rem 0;
+}
+
+/* ==========================
+   ANALYZE BUTTON
+========================== */
+
+.analyze-btn {
+  margin-top: 2rem;
+
+  background: #52D1A3;
+
+  color: #0F1916;
+
+  padding: 1rem 2rem;
+
+  border: none;
+
+  border-radius: 12px;
+
+  font-size: 1rem;
+
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.analyze-btn:hover:not(:disabled) {
+  transform: translateY(-3px);
+
+  box-shadow: 0 10px 20px rgba(82, 209, 163, 0.25);
+}
+
+.analyze-btn:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+
+/* ==========================
+   HOW IT WORKS
+========================== */
+
+.instructions {
+  width: 90%;
+
+  max-width: 1200px;
+
+  margin: 5rem auto;
+}
+
+.instructions h2 {
+  text-align: center;
+
+  font-size: 2.5rem;
+
+  margin-bottom: 3rem;
+}
+
+/* ==========================
+   STEP CARDS
+========================== */
+
+.steps {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 1.5rem;
+}
+
+.step-card {
+  background: #1E2E2A;
+
+  padding: 2rem;
+
+  border-radius: 20px;
+
+  text-align: center;
+
+  border: 1px solid rgba(82, 209, 163, 0.15);
+
+  transition: all 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #52D1A3;
+}
+
+.step-card h3 {
+  font-size: 2rem;
+
+  color: #52D1A3;
+
+  margin-bottom: 1rem;
+}
+
+.step-card p {
+  color: rgba(240, 253, 244, 0.85);
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 768px) {
+
+  .upload-container {
+    padding: 2rem 0;
+  }
+
+  .upload-container h1 {
+    font-size: 2.2rem;
+  }
+
+  .instructions h2 {
+    font-size: 2rem;
+  }
+
+}
