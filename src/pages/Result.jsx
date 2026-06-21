@@ -38,13 +38,14 @@ export default function Result() {
       {/* Header */}
       <div className="result-header">
 
-        <h1>Analysis Complete</h1>
+        <h1>Analysis</h1>
 
         <p>
           The uploaded media has been analyzed by DeepShield.
         </p>
 
       </div>
+
 
       {/* Uploaded Media */}
       {result.imagePreview && (
