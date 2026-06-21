@@ -33,12 +33,10 @@
 
 .upload-container p {
   color: rgba(240, 253, 244, 0.8);
-
   line-height: 1.7;
-
   max-width: 700px;
-
   margin: 0 auto;
+  font-size: medium;
 }
 
 /* ==========================

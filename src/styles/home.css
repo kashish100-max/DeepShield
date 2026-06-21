@@ -197,53 +197,7 @@
   color: rgba(240, 253, 244, 0.7);
 }
 
-.upload-preview {
-  text-align: center;
-}
 
-.upload-icon {
-  font-size: 5rem;
-  color: #52D1A3;
-  margin-bottom: 1rem;
-}
-
-.upload-preview h3 {
-  color: #F0FDF4;
-  margin-bottom: 1rem;
-}
-
-.upload-preview p {
-  color: rgba(240, 253, 244, 0.75);
-  margin-bottom: 1.5rem;
-}
-
-.browse-btn {
-  background: #52D1A3;
-  color: #0F1916;
-
-  padding: 0.9rem 1.5rem;
-
-  border-radius: 12px;
-
-  font-weight: 600;
-
-  transition: 0.3s ease;
-}
-
-.browse-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(82, 209, 163, 0.25);
-}
-
-.upload-preview span {
-  display: block;
-
-  margin-top: 1rem;
-
-  color: rgba(240, 253, 244, 0.6);
-
-  font-size: 0.9rem;
-}
 
 /* ==========================
    MOBILE

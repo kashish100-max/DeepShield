@@ -18,7 +18,7 @@
 }
 
 .result-header h1 {
-  font-size: 3rem;
+  font-size: 3.2rem;
   margin-bottom: 1rem;
 }
 
@@ -27,6 +27,7 @@
   max-width: 700px;
   margin: 0 auto;
   line-height: 1.7;
+  font-size: 1.5rem;
 }
 
 /* ==========================
@@ -38,6 +39,9 @@
   max-width: 900px;
   margin: 0 auto 3rem auto;
   text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .preview-section h2 {
@@ -85,6 +89,10 @@
   margin-bottom: 2rem;
 }
 
+/* ==========================
+   RISK CIRCLE
+========================== */
+
 .risk-circle {
   width: 180px;
   height: 180px;
@@ -97,30 +105,116 @@
   justify-content: center;
   align-items: center;
 
-  border: 8px solid #52D1A3;
+  background:
+    conic-gradient(
+      var(--ring-color, #52D1A3)
+      calc(var(--percentage) * 1%),
+      rgba(255,255,255,0.08) 0
+    );
+
+  position: relative;
 }
 
-.risk-circle h1 {
+.risk-circle::before {
+  content: "";
+
+  position: absolute;
+
+  width: 145px;
+  height: 145px;
+
+  border-radius: 50%;
+
+  background: #1E2E2A;
+}
+
+.risk-circle-content {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.risk-circle-content h1 {
   font-size: 3rem;
   color: #52D1A3;
+
+  margin: 0;
 }
+
+.risk-circle-content span {
+  color: rgba(240,253,244,0.7);
+
+  font-size: 0.9rem;
+
+  letter-spacing: 2px;
+}
+
+/* ==========================
+   RISK INFO
+========================== */
 
 .risk-card h3 {
   margin-top: 1.5rem;
+
   color: #EE6B6B;
 }
+
+.risk-description {
+  margin-top: 1rem;
+
+  color: rgba(240,253,244,0.75);
+
+  line-height: 1.7;
+}
+
+/* ==========================
+   SUMMARY CARD
+========================== */
 
 .summary-card h2 {
   margin-bottom: 1rem;
 }
 
-.summary-card p {
-  font-size: 1.1rem;
-  line-height: 1.7;
+.prediction-text {
+  color: #F0FDF4;
+
+  line-height: 1.8;
+
+  margin-bottom: 1.5rem;
 }
 
-.summary-card h4 {
+/* ==========================
+   STATS
+========================== */
+
+.summary-stats {
   margin-top: 1rem;
+}
+
+.stat-row {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 1rem 0;
+
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.stat-row:last-child {
+  border-bottom: none;
+}
+
+.stat-row span {
+  color: rgba(240,253,244,0.75);
+}
+
+.stat-row strong {
   color: #52D1A3;
 }
 

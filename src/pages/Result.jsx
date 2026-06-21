@@ -23,6 +23,20 @@ export default function Result() {
     ],
   };
 
+  const ringColor =
+  result.riskScore >= 75
+    ? "#EE6B6B" // High Risk
+    : result.riskScore >= 40
+    ? "#F5B041" // Medium Risk
+    : "#52D1A3"; // Low Risk
+
+const riskColor =
+  result.riskScore >= 75
+    ? "#EE6B6B"
+    : result.riskScore >= 40
+    ? "#F5B041"
+    : "#52D1A3";
+
   const riskLevel =
     result.riskScore >= 75
       ? "High"
@@ -62,40 +76,75 @@ export default function Result() {
         </div>
       )}
 
-      {/* Risk Section */}
       <div className="risk-section">
 
-        <div className="risk-card">
+  <div className="risk-card">
 
-          <h2>Risk Score</h2>
+    <h2>AI Manipulation Risk</h2>
 
-          <div className="risk-circle">
-            <h1>{result.riskScore}%</h1>
-          </div>
-
-          <h3>{riskLevel} Risk</h3>
-
-        </div>
-
-        <div className="summary-card">
-
-          <h2>Detection Summary</h2>
-
-          <p className="prediction-text">
-            {result.prediction}
-          </p>
-
-          <h4>
-            Confidence: {result.confidence}%
-          </h4>
-
-          <h4>
-            Risk Level: {riskLevel}
-          </h4>
-
-        </div>
-
+    <div
+  className="risk-circle"
+  style={{
+    "--percentage": result.riskScore,
+    "--ring-color": ringColor,
+  }}
+>
+      <div className="risk-circle-content">
+        <h1>{result.riskScore}%</h1>
+        <span>RISK</span>
       </div>
+    </div>
+
+    <h3
+  style={{
+    color: riskColor,
+  }}
+>
+  {riskLevel} Risk
+</h3>
+
+    <p className="risk-description">
+      This media has a {result.riskScore}% likelihood
+      of containing AI-generated or manipulated content.
+    </p>
+
+  </div>
+
+  <div className="summary-card">
+
+    <h2>Detection Summary</h2>
+
+    <p className="prediction-text">
+      {result.prediction}
+    </p>
+
+    <div className="summary-stats">
+
+      <div className="stat-row">
+        <span>Manipulation Risk</span>
+        <strong>{result.riskScore}%</strong>
+      </div>
+
+      <div className="stat-row">
+        <span>Authenticity Score</span>
+        <strong>{100 - result.riskScore}%</strong>
+      </div>
+
+      <div className="stat-row">
+        <span>Model Confidence</span>
+        <strong>{result.confidence}%</strong>
+      </div>
+
+      <div className="stat-row">
+        <span>Risk Level</span>
+        <strong>{riskLevel}</strong>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
 
       {/* Indicators */}
       <div className="indicator-section">

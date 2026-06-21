@@ -10,30 +10,73 @@ export default function Upload() {
 
   const navigate = useNavigate();
 
-  const handleAnalyze = () => {
-    if (!file) {
-      alert("Please select a file first!");
-      return;
-    }
+  const [loading, setLoading] = useState(false);
+
+const handleAnalyze = async () => {
+  if (!file) {
+    alert("Please select a file first!");
+    return;
+  }
+
+  try {
+    setLoading(true);
+
+    const formData = new FormData();
+    formData.append("file", file);
+
+    const response = await fetch(
+      "http://127.0.0.1:8000/detect",
+      {
+        method: "POST",
+        body: formData,
+      }
+    );
+
+    const data = await response.json();
+
+    const deepfakeScore = Math.round(data.Deepfake * 100);
+    const realismScore = Math.round(data.Realism * 100);
+
+    const prediction =
+      deepfakeScore > realismScore
+        ? "Potential Deepfake Detected"
+        : "Likely Authentic";
 
     navigate("/result", {
       state: {
         imagePreview: URL.createObjectURL(file),
 
-        prediction: "⚠ Potential Deepfake Detected",
+        prediction,
 
-        riskScore: 87,
+        riskScore: deepfakeScore,
 
-        confidence: 92,
+        confidence: Math.max(
+          deepfakeScore,
+          realismScore
+        ),
 
-        indicators: [
-          "Facial inconsistencies",
-          "Lighting anomalies",
-          "Compression artifacts",
-        ],
+        indicators:
+          deepfakeScore > 50
+            ? [
+                "Facial inconsistencies",
+                "Lighting anomalies",
+                "AI-generated patterns",
+              ]
+            : [
+                "Natural facial structure",
+                "Consistent lighting",
+                "No major anomalies detected",
+              ],
       },
     });
-  };
+
+  } catch (error) {
+    console.error(error);
+    alert("Analysis failed.");
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <div className="upload-page">
@@ -57,12 +100,12 @@ export default function Upload() {
 
 
         <button
-          className="analyze-btn"
-          onClick={handleAnalyze}
-          disabled={!file}
-        >
-          Analyze Media
-        </button>
+  className="analyze-btn"
+  onClick={handleAnalyze}
+  disabled={!file || loading}
+>
+  {loading ? "Analyzing..." : "Analyze Media"}
+</button>
 
       </div>
 
