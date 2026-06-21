@@ -42,7 +42,7 @@ export default function Upload() {
 
       <div className="upload-container">
 
-        <h1>Deepfake Analysis</h1>
+        <h1>DeepFake Analysis</h1>
 
         <p>
           Upload an image or video to analyze its authenticity
