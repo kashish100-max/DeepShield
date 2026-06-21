@@ -142,7 +142,7 @@ export default function Home() {
       </section>
 
       <footer className="footer">
-        <p>© 2026 DeepShield | Detect. Verify. Protect.</p>
+        <p>© 2026 DeepShield</p>
       </footer>
 
     </div>
