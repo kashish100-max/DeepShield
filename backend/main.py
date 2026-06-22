@@ -5,6 +5,10 @@ import shutil
 import uuid
 import os
 
+import os
+
+os.makedirs("uploads", exist_ok=True)
+
 from detector import detect_deepfake
 
 app = FastAPI()
