@@ -14,17 +14,7 @@ DeepShield is an AI-powered deepfake detection and risk assessment platform desi
 
 ## System Architecture
 
-User Upload
-⬇️
-React Frontend (Vite)
-⬇️
-FastAPI Backend
-⬇️
-Deepfake Detection Model
-⬇️
-Risk Assessment Engine
-⬇️
-Results & Action Guide
+User Upload -> React Frontend (Vite) -> FastAPI Backend -> Deepfake Detection Model -> Risk Assessment Engine -> Results & Action Guide
 
 ## Tech Stack
 
